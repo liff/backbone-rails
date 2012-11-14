@@ -1,11 +1,8 @@
-require 'rails'
+require 'backbone-rails/version'
 
 module Backbone
   module Rails
-    if ::Rails.version < "3.1"
-      require 'backbone-rails/railtie'
-    else
-      require 'backbone-rails/engine'
+    class Engine < ::Rails::Engine
     end
   end
 end
